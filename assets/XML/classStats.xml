@@ -1,0 +1,20 @@
+<api batchcomplete="">
+    <query>
+        <classes>
+            <item class="Rogue" life="625" maxLife="720" mana="195" maxMana="252" def="0" maxDef="25" atk="29" maxAtk="50" spd="43" maxSpd="75" dex="43" maxDex="75" wis="29" maxWis="50" vit="24" maxVit="40"/>
+            <item class="Trickster" life="625" maxLife="720" mana="195" maxMana="252" def="0" maxDef="25" atk="38" maxAtk="65" spd="40" maxSpd="75" dex="43" maxDex="75" wis="31" maxWis="60" vit="21" maxVit="40"/>
+            <item class="Assassin" life="625" maxLife="720" mana="195" maxMana="252" def="0" maxDef="25" atk="31" maxAtk="60" spd="43" maxSpd="75" dex="43" maxDex="75" wis="38" maxWis="60" vit="24" maxVit="40"/>
+            <item class="Ninja" life="625" maxLife="720" mana="195" maxMana="252" def="0" maxDef="25" atk="43" maxAtk="70" spd="29" maxSpd="60" dex="40" maxDex="70" wis="40" maxWis="70" vit="19" maxVit="40"/>
+            <item class="Archer" life="605" maxLife="700" mana="195" maxMana="252" def="0" maxDef="25" atk="40" maxAtk="75" spd="31" maxSpd="50" dex="31" maxDex="50" wis="29" maxWis="50" vit="21" maxVit="40"/>
+            <item class="Huntress" life="605" maxLife="700" mana="195" maxMana="252" def="0" maxDef="25" atk="40" maxAtk="75" spd="31" maxSpd="50" dex="31" maxDex="50" wis="29" maxWis="50" vit="21" maxVit="40"/>
+            <item class="Warrior" life="675" maxLife="770" mana="195" maxMana="252" def="0" maxDef="25" atk="43" maxAtk="75" spd="26" maxSpd="50" dex="29" maxDex="50" wis="29" maxWis="50" vit="38" maxVit="75"/>
+            <item class="Knight" life="675" maxLife="770" mana="195" maxMana="252" def="0" maxDef="40" atk="43" maxAtk="50" spd="26" maxSpd="50" dex="29" maxDex="50" wis="29" maxWis="50" vit="38" maxVit="75"/>
+            <item class="Paladin" life="675" maxLife="770" mana="195" maxMana="252" def="0" maxDef="30" atk="40" maxAtk="50" spd="31" maxSpd="55" dex="29" maxDex="45" wis="38" maxWis="75" vit="19" maxVit="40"/>
+            <item class="Sorcerer" life="575" maxLife="670" mana="290" maxMana="385" def="0" maxDef="25" atk="38" maxAtk="60" spd="40" maxSpd="60" dex="31" maxDex="60" wis="43" maxWis="60" vit="38" maxVit="75"/>
+            <item class="Priest" life="575" maxLife="670" mana="290" maxMana="385" def="0" maxDef="25" atk="31" maxAtk="50" spd="40" maxSpd="55" dex="31" maxDex="55" wis="43" maxWis="75" vit="19" maxVit="40"/>
+            <item class="Wizard" life="575" maxLife="670" mana="290" maxMana="385" def="0" maxDef="25" atk="40" maxAtk="75" spd="29" maxSpd="50" dex="43" maxDex="75" wis="31" maxWis="60" vit="21" maxVit="40"/>
+            <item class="Necromancer" life="575" maxLife="670" mana="290" maxMana="385" def="0" maxDef="25" atk="40" maxAtk="60" spd="29" maxSpd="50" dex="43" maxDex="60" wis="40" maxWis="75" vit="19" maxVit="30"/>
+            <item class="Mystic" life="575" maxLife="670" mana="290" maxMana="385" def="0" maxDef="25" atk="38" maxAtk="60" spd="31" maxSpd="60" dex="29" maxDex="55" wis="43" maxWis="75" vit="24" maxVit="40"/>
+        </classes>
+    </query>
+</api>

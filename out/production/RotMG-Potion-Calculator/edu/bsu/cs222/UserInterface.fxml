@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.collections.FXCollections?>
+<?import com.sun.javafx.scene.control.skin.IntegerField?>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="375.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.bsu.cs222.UIController">
+   <children>
+      <HBox layoutX="258.0" layoutY="14.0" prefHeight="26.0" prefWidth="192.0">
+         <children>
+            <Label text="Current Stats">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Label>
+            <Label text="Max Stats">
+               <HBox.margin>
+                  <Insets left="12.0" right="9.0" />
+               </HBox.margin>
+            </Label>
+            <Label text="To Max" />
+         </children>
+      </HBox>
+      <HBox layoutX="258.0" layoutY="66.0" prefHeight="26.0" prefWidth="192.0">
+         <children>
+            <Spinner fx:id="currentManaText" editable="false" prefHeight="25.0" prefWidth="80.0" onMouseClicked="#updateMana">
+               <HBox.margin>
+                  <Insets left="2.0" right="2.0" />
+               </HBox.margin>
+            </Spinner>
+            <TextField fx:id="maxManaText" editable="false" prefHeight="25.0" prefWidth="65.0" text="0">
+               <HBox.margin>
+                  <Insets left="2.0" right="2.0" />
+               </HBox.margin>
+            </TextField>
+            <TextField fx:id="manaToMaxText" editable="false" prefHeight="25.0" prefWidth="50.0" text="0">
+               <HBox.margin>
+                  <Insets left="2.0" right="2.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox layoutX="258.0" layoutY="92.0" prefHeight="26.0" prefWidth="192.0">
+         <children>
+            <Spinner fx:id="currentDefText" editable="false" prefHeight="25.0" prefWidth="80.0" onMouseClicked="#updateDef">
+               <HBox.margin>
+                  <Insets left="2.0" right="2.0" />
+               </HBox.margin>
+            </Spinner>
+            <TextField fx:id="maxDefText" editable="false" prefHeight="25.0" prefWidth="65.0" text="0">
+               <HBox.margin>
+                  <Insets left="2.0" right="2.0" />
+               </HBox.margin>
+            </TextField>
+            <TextField fx:id="defToMaxText" editable="false" prefHeight="25.0" prefWidth="50.0" text="0">
+               <HBox.margin>
+                  <Insets left="2.0" right="2.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox layoutX="258.0" layoutY="118.0" prefHeight="26.0" prefWidth="192.0">
+         <children>
+            <Spinner fx:id="currentAtkText" editable="false" prefHeight="25.0" prefWidth="80.0" onMouseClicked="#updateAtk">
+               <HBox.margin>
+                  <Insets left="2.0" right="2.0" />
+               </HBox.margin>
+            </Spinner>
+            <TextField fx:id="maxAtkText" editable="false" prefHeight="25.0" prefWidth="65.0" text="0">
+               <HBox.margin>
+                  <Insets left="2.0" right="2.0" />
+               </HBox.margin>
+            </TextField>
+            <TextField fx:id="atkToMaxText" editable="false" prefHeight="25.0" prefWidth="50.0" text="0">
+               <HBox.margin>
+                  <Insets left="2.0" right="2.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox layoutX="258.0" layoutY="144.0" prefHeight="26.0" prefWidth="192.0">
+         <children>
+            <Spinner fx:id="currentSpdText" editable="false" prefHeight="25.0" prefWidth="80.0" onMouseClicked="#updateSpd">
+               <HBox.margin>
+                  <Insets left="2.0" right="2.0" />
+               </HBox.margin>
+            </Spinner>
+            <TextField fx:id="maxSpdText" editable="false" prefHeight="25.0" prefWidth="65.0" text="0">
+               <HBox.margin>
+                  <Insets left="2.0" right="2.0" />
+               </HBox.margin>
+            </TextField>
+            <TextField fx:id="spdToMaxText" editable="false" prefHeight="25.0" prefWidth="50.0" text="0">
+               <HBox.margin>
+                  <Insets left="2.0" right="2.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox layoutX="258.0" layoutY="170.0" prefHeight="26.0" prefWidth="192.0">
+         <children>
+            <Spinner fx:id="currentDexText" editable="false" prefHeight="25.0" prefWidth="80.0" onMouseClicked="#updateDex">
+               <HBox.margin>
+                  <Insets left="2.0" right="2.0" />
+               </HBox.margin>
+            </Spinner>
+            <TextField fx:id="maxDexText" editable="false" prefHeight="25.0" prefWidth="65.0" text="0">
+               <HBox.margin>
+                  <Insets left="2.0" right="2.0" />
+               </HBox.margin>
+            </TextField>
+            <TextField fx:id="dexToMaxText" editable="false" prefHeight="25.0" prefWidth="50.0" text="0">
+               <HBox.margin>
+                  <Insets left="2.0" right="2.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox layoutX="258.0" layoutY="196.0" prefHeight="26.0" prefWidth="192.0">
+         <children>
+            <Spinner fx:id="currentVitText" editable="false" prefHeight="25.0" prefWidth="80.0" onMouseClicked="#updateVit">
+               <HBox.margin>
+                  <Insets left="2.0" right="2.0" />
+               </HBox.margin>
+            </Spinner>
+            <TextField fx:id="maxVitText" editable="false" prefHeight="25.0" prefWidth="65.0" text="0">
+               <HBox.margin>
+                  <Insets left="2.0" right="2.0" />
+               </HBox.margin>
+            </TextField>
+            <TextField fx:id="vitToMaxText" editable="false" prefHeight="25.0" prefWidth="50.0" text="0">
+               <HBox.margin>
+                  <Insets left="2.0" right="2.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox layoutX="258.0" layoutY="222.0" prefHeight="26.0" prefWidth="192.0">
+         <children>
+            <Spinner fx:id="currentWisText" editable="false" prefHeight="25.0" prefWidth="80.0" onMouseClicked="#updateWis">
+               <HBox.margin>
+                  <Insets left="2.0" right="2.0" />
+               </HBox.margin>
+            </Spinner>
+            <TextField fx:id="maxWisText" editable="false" prefHeight="25.0" prefWidth="65.0" text="0">
+               <HBox.margin>
+                  <Insets left="2.0" right="2.0" />
+               </HBox.margin>
+            </TextField>
+            <TextField fx:id="wisToMaxText" editable="false" prefHeight="25.0" prefWidth="50.0" text="0">
+               <HBox.margin>
+                  <Insets left="2.0" right="2.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox layoutX="258.0" layoutY="40.0" prefHeight="26.0" prefWidth="192.0">
+         <children>
+            <Spinner fx:id="currentLifeText" editable="false" prefHeight="25.0" prefWidth="80.0" onMouseClicked="#updateLife">
+               <HBox.margin>
+                  <Insets left="2.0" right="2.0" />
+               </HBox.margin>
+            </Spinner>
+            <TextField fx:id="maxLifeText" editable="false" prefHeight="25.0" prefWidth="65.0" text="0">
+               <HBox.margin>
+                  <Insets left="2.0" right="2.0" />
+               </HBox.margin>
+            </TextField>
+            <TextField fx:id="lifeToMaxText" editable="false" prefHeight="25.0" prefWidth="50.0" text="0">
+               <HBox.margin>
+                  <Insets left="2.0" right="2.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <GridPane gridLinesVisible="true" layoutX="476.0" layoutY="12.0" prefHeight="345.0" prefWidth="410.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="45.5" minWidth="45.5" prefWidth="45.5" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="45.5" minWidth="45.5" prefWidth="45.5" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="45.5" minWidth="45.5" prefWidth="45.5" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="45.5" minWidth="45.5" prefWidth="45.5" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="45.5" minWidth="45.5" prefWidth="45.5" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="45.5" minWidth="45.5" prefWidth="45.5" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="45.5" minWidth="45.5" prefWidth="45.5" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="45.5" prefWidth="45.5" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="45.5" minWidth="10.0" prefWidth="45.5" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="38.33" minHeight="38.33" prefHeight="38.33" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="38.33" minHeight="38.33" prefHeight="38.33" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="38.33" minHeight="38.33" prefHeight="38.33" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="38.33" minHeight="38.33" prefHeight="38.33" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="38.33" minHeight="38.33" prefHeight="38.33" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="38.33" minHeight="38.33" prefHeight="38.33" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="38.33" minHeight="38.33" prefHeight="38.33" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="38.33" minHeight="38.33" prefHeight="38.33" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="38.33" minHeight="38.33" prefHeight="38.33" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Life" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="11.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Mana" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="7.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Def" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="11.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Atk" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="11.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Spd" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="11.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Dex" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets left="11.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Vit" GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets left="11.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Wis" GridPane.rowIndex="8">
+               <GridPane.margin>
+                  <Insets left="11.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Life" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Mana" GridPane.columnIndex="2">
+               <GridPane.margin>
+                  <Insets left="7.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Def" GridPane.columnIndex="3">
+               <GridPane.margin>
+                  <Insets left="11.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Atk" GridPane.columnIndex="4">
+               <GridPane.margin>
+                  <Insets left="11.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Spd" GridPane.columnIndex="5">
+               <GridPane.margin>
+                  <Insets left="11.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Dex" GridPane.columnIndex="6">
+               <GridPane.margin>
+                  <Insets left="11.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Vit" GridPane.columnIndex="7">
+               <GridPane.margin>
+                  <Insets left="11.0" />
+               </GridPane.margin>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="39.0" text="Wis" GridPane.columnIndex="8">
+               <GridPane.margin>
+                  <Insets left="11.0" />
+               </GridPane.margin>
+            </Label>
+            <Label GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <GridPane gridLinesVisible="true" layoutX="17.0" layoutY="281.0" prefHeight="60.0" prefWidth="440.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Life" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="13.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Mana" GridPane.columnIndex="2">
+               <GridPane.margin>
+                  <Insets left="8.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Def" GridPane.columnIndex="3">
+               <GridPane.margin>
+                  <Insets left="13.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Atk" GridPane.columnIndex="4">
+               <GridPane.margin>
+                  <Insets left="13.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Spd" GridPane.columnIndex="5">
+               <GridPane.margin>
+                  <Insets left="13.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Dex" GridPane.columnIndex="6">
+               <GridPane.margin>
+                  <Insets left="13.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Vit" GridPane.columnIndex="7">
+               <GridPane.margin>
+                  <Insets left="13.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Wis" GridPane.columnIndex="8">
+               <GridPane.margin>
+                  <Insets left="13.0" />
+               </GridPane.margin>
+            </Label>
+            <Label prefHeight="35.0" prefWidth="43.0" text="To Max &#10;All Stats" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="2.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="totalLifeToMaxText" editable="false" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="totalManaToMaxText" editable="false" text="0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <TextField fx:id="totalDefToMaxText" editable="false" text="0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <TextField fx:id="totalAtkToMaxText" editable="false" text="0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <TextField fx:id="totalSpdToMaxText" editable="false" text="0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <TextField fx:id="totalDexToMaxText" editable="false" text="0" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+            <TextField fx:id="totalVitToMaxText" editable="false" text="0" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+            <TextField fx:id="totalWisToMaxText" editable="false" text="0" GridPane.columnIndex="8" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <ImageView fx:id="classImage" fitHeight="192.0" fitWidth="192.0" layoutX="14.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+         <viewport>
+            <Rectangle2D />
+         </viewport>
+      </ImageView>
+      <ComboBox fx:id="classSelectBox" layoutX="14.0" layoutY="223.0" onAction="#switchCurrentClass" prefHeight="25.0" prefWidth="192.0" value="Class">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="Rogue"/>
+               <String fx:value="Archer"/>
+               <String fx:value="Wizard"/>
+               <String fx:value="Priest"/>
+               <String fx:value="Warrior"/>
+               <String fx:value="Knight"/>
+               <String fx:value="Paladin"/>
+               <String fx:value="Assassin"/>
+               <String fx:value="Necromancer"/>
+               <String fx:value="Huntress"/>
+               <String fx:value="Mystic"/>
+               <String fx:value="Trickster"/>
+               <String fx:value="Sorcerer"/>
+               <String fx:value="Ninja"/>
+            </FXCollections>
+         </items>
+      </ComboBox>
+      <VBox layoutX="217.0" layoutY="40.0" prefHeight="207.0" prefWidth="39.0">
+         <children>
+            <Label text="Life">
+               <VBox.margin>
+                  <Insets left="9.0" top="4.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Mana">
+               <VBox.margin>
+                  <Insets left="4.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Def">
+               <VBox.margin>
+                  <Insets left="8.0" top="9.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Atk">
+               <VBox.margin>
+                  <Insets left="8.0" top="9.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Spd">
+               <VBox.margin>
+                  <Insets left="8.0" top="9.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Dex">
+               <VBox.margin>
+                  <Insets left="7.0" top="9.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Vit">
+               <VBox.margin>
+                  <Insets left="9.0" top="9.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Wis">
+               <VBox.margin>
+                  <Insets left="7.0" top="9.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</Pane>

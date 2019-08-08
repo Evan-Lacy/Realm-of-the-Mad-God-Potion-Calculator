@@ -1,0 +1,14 @@
+<api batchcomplete="">
+    <query>
+        <classes>
+            <item potion="life" toLife="1" toMana="2" toDef="6" toAtk="6" toDex="8" toSpd="8" toWis="8" toVit="8"/>
+            <item potion="mana" toLife=".5" toMana="1" toDef="3" toAtk="3" toDex="8" toSpd="6" toWis="6" toVit="6"/>
+            <item potion="defense" toLife=".16" toMana=".33" toDef="1" toAtk="1" toDex="3" toSpd="2" toWis="2" toVit="2"/>
+            <item potion="attack" toLife=".16" toMana=".33" toDef="1" toAtk="1" toDex="3" toSpd="2" toWis="2" toVit="2"/>
+            <item potion="speed" toLife=".125" toMana=".16" toDef=".5" toAtk=".5" toDex="2" toSpd="1" toWis="1" toVit="1"/>
+            <item potion="dexterity" toLife=".125" toMana=".125" toDef=".33" toAtk=".33" toDex="1" toSpd=".5" toWis=".5" toVit=".5"/>
+            <item potion="wisdom" toLife=".125" toMana=".16" toDef=".5" toAtk=".5" toDex="2" toSpd="1" toWis="1" toVit="1"/>
+            <item potion="vitality" toLife=".125" toMana=".16" toDef=".5" toAtk=".5" toDex="2" toSpd="1" toWis="1" toVit="1"/>
+        </classes>
+    </query>
+</api>
